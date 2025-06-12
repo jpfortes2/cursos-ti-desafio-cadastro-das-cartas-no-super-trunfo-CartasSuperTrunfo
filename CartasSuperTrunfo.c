@@ -10,8 +10,9 @@ int main(){
     float area1, area2, pib1, pib2;
     char codfinal1[5], codfinal2[5];
 
-
+//introdução do jogo
     printf("Desafio Super Trunfo!!!\n");
+
 //captação de dados
     //carta 1
      printf("Vamos começar coletando os dados da Carta 1\n");
@@ -84,6 +85,34 @@ int main(){
     printf("PIB: %f\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", numpontotur2);
 
+
+//Calculando densidade populacional e PIB per capita
+
+    float densidadepop1 = populacao1 / area1;
+    float densidadepop2 = populacao2 / area2;
+
+    float pibpercapita1 = pib1 / populacao1;
+    float pibpercapita2 = pib2 / populacao2;
+
+//Comparando as cartas
+
+    printf("\nComparando as Cartas em termos de densidade populacional:\n");
+
+    printf("Carta 1: Densidade Populacional = %.2f\n", densidadepop1);
+    printf("Carta 2: Densidade Populacional = %.2f\n", densidadepop2);
+
+    if (densidadepop1 < densidadepop2) {
+        printf("A Carta 1 tem uma densidade populacional menor que a Carta 2.\n");
+        printf("A Carta 1 venceu!!! \n");
+    } else if (densidadepop1 > densidadepop2) {
+        printf("A Carta 2 tem uma densidade populacional menor que a Carta 1.\n");
+        printf("A Carta 2 venceu!!! \n");
+    } else {
+        printf("As duas cartas têm a mesma densidade populacional.\n");
+        printf("Empate!!! \n");
+    }
+
+   
     
 
 //Finalizando software
